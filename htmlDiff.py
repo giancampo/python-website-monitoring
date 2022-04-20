@@ -60,7 +60,7 @@ new_text.close()
 
 #send an email if the script has found differences
 if filecmp.cmp('ABSOLUTE-PATH-TO/old_text.txt', 'ABSOLUTE-PATH-TO/new_text.txt') == True:
-    print 'no emails sent'
+    print ('no emails sent')
 else:
     gmail_user = 'YOUR-GMAIL-ADDRESS'
     gmail_password = 'YOUR-GMAIL-PASSWORD'
@@ -77,7 +77,7 @@ else:
     server.login(gmail_user, gmail_password)
     server.sendmail(sent_from, to, email_text)
     server.close()
-    print 'Email sent!'
+    print ('Email sent!')
 
 #files closing
 diff_file.close()
